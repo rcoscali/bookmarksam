@@ -1,0 +1,5 @@
+*.c working-tree-encoding
+*.h  working-tree-encoding
+*.txt working-tree-encoding
+src/*.c ident
+src/*.h ident

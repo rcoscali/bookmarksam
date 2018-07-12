@@ -1,6 +1,7 @@
 /* -*- Mode: C; indent-tabs-mode: t; c-basic-offset: 4; tab-width: 4 -*-  */
 /*
  * bookmarksam.c
+ * $id$
  * Copyright (C) 2018 Rémi Cohen-Scali <remi@cohenscali.net>
  * 
  * bookmarksam is free software: you can redistribute it and/or modify it
