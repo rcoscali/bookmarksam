@@ -1,0 +1,7 @@
+# List of source files containing translatable strings.
+
+src/bookmarksam-main.c
+src/bookmarksam.c
+src/bookmarksam-common.c
+src/bookmarksam.ui
+

@@ -1,0 +1,114 @@
+# Sigmoid POT file for French translation.
+# Copyright (C) 2018 Free Software Foundation, Inc.
+# This file is distributed under the same license as the sigmoid package.
+# Rémi Cohen-Scali <remi@cohenscali.net>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sigmoid 0.1\n"
+"Report-Msgid-Bugs-To: http://bookmarksam.bugzilla.org/\n"
+"POT-Creation-Date: 2018-07-12 00:02+0200\n"
+"PO-Revision-Date: 2018-07-12 00:39+0200\n"
+"Last-Translator: Rémi Cohen-Scali <remi@cohenscali.net>\n"
+"Language-Team: FR <fr@li.org>\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.9\n"
+
+# Apropos
+#: src/bookmarksam-main.c:251
+msgid "About Bookmarksam"
+msgstr "A Propos de BookmarksAM"
+
+#: src/bookmarksam.c:602
+msgid "The Bookmarksam GTK application object."
+msgstr "L'objet de l'application GTK bookmarksam"
+
+#: src/bookmarksam.c:609
+msgid "Name of the builder to load and display UI file."
+msgstr "Nom du factory permettant de charger et afficher l'interface."
+
+#: src/bookmarksam.c:616
+msgid "GTK window of the Bookmarksam application."
+msgstr "Fenêtre GTK de l'application Bookmarksam."
+
+#: src/bookmarksam.c:623
+msgid "GTK window of the Bookmarksam application about dialog."
+msgstr "Fenêtre GTK du dialogue 'A Propos' de l'application Bookmarksam."
+
+#: src/bookmarksam.c:630
+msgid "APP Action group for the Bookmarksam application."
+msgstr "Groupe d'action APP pour l'application Bookmarksam."
+
+#: src/bookmarksam.c:637
+msgid "EDIT Action group for the Bookmarksam application."
+msgstr "Groupe d'action EDIT pour l'application Bookmarksam."
+
+#: src/bookmarksam.c:644
+msgid "DISPLAY Action group for the Bookmarksam application."
+msgstr "Groupe d'action DISPLAY pour l'application Bookmarksam."
+
+#: src/bookmarksam.c:651
+msgid "HELP Action group for the Bookmarksam application."
+msgstr "Groupe d'action AIDE pour l'application Bookmarksam."
+
+#: src/bookmarksam.ui:54
+msgid "_File"
+msgstr "_Fichier"
+
+#: src/bookmarksam.ui:129
+msgid "_Edit"
+msgstr "_Edition"
+
+#: src/bookmarksam.ui:187
+msgid "_Display"
+msgstr "A_ffichage"
+
+#: src/bookmarksam.ui:195
+msgid "_Help"
+msgstr "_Aide"
+
+#: src/bookmarksam.ui:234
+msgid "New"
+msgstr "_Nouveau"
+
+#: src/bookmarksam.ui:258
+msgid "Open"
+msgstr "_Ouvrir"
+
+#: src/bookmarksam.ui:272
+msgid "Save"
+msgstr "_Sauver"
+
+#: src/bookmarksam.ui:286
+msgid "Save As"
+msgstr "S_auver Comme"
+
+#: src/bookmarksam.ui:310
+msgid "Quit"
+msgstr "_Quitter"
+
+#: src/bookmarksam.ui:324
+msgid "Cut"
+msgstr "Couper"
+
+#: src/bookmarksam.ui:338
+msgid "Copy"
+msgstr "Copier"
+
+#: src/bookmarksam.ui:352
+msgid "Paste"
+msgstr "Coller"
+
+#: src/bookmarksam.ui:366
+msgid "Delete"
+msgstr "Supprimer"
+
+#: src/bookmarksam.ui:415
+msgid "........"
+msgstr "Chargez un fichier ..."
+
+#~ msgid "About Sigmoid"
+#~ msgstr "A propos de Sigmoid"

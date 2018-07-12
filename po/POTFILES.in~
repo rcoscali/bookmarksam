@@ -1,0 +1,7 @@
+# List of source files containing translatable strings.
+
+src/main.c
+src/common.c
+src/sigmoid.c
+src/sigmoid.ui
+

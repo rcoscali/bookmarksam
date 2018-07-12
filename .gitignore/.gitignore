@@ -50,3 +50,9 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+libtool
+autom4te.cache/*
+config.status
+config.h
+configure
+*~
