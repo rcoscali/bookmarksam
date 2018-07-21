@@ -103,6 +103,10 @@ fi
 
 AC_CONFIG_FILES([Makefile
                  src/Makefile
+                 help/Makefile
+                 help/C/Makefile
+                 help/fr/Makefile
+                 help/en/Makefile
                  po/Makevars:po/Makevars.template
                  po/Makefile.in
 ])

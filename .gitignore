@@ -65,3 +65,15 @@ config.status
 configure
 libtool
 stamp-h1
+
+*.in~
+
+src/\.deps/
+
+src/bookmarksam
+
+help/C/omf_timestamp
+
+help/fr/omf_timestamp
+
+help/en/omf_timestamp

@@ -47,14 +47,6 @@ libcommon_la_SOURCES = bookmarksam-common.c
 
 bin_PROGRAMS = bookmarksam
 
-variantparse_SOURCES = \
-        variantparse.c
-
-variantparse_LDFLAGS = \
-        -Wl,--export-dynamic
-
-variantparse_LDADD = $(VARIANTPARSE_LIBS)
-
 bookmarksam_SOURCES = \
         bookmarksam-main.c \
         bookmarksam.h \
@@ -70,9 +62,6 @@ bookmarksam_LDADD = $(BOOKMARKSAM_LIBS)
 
 
 EXTRA_DIST = $(ui_DATA)
-
-MOSTLYCLEANFILES = *~ \#* .\#*
-#DISTCLEANFILES = 
 
 # Remove ui directory on uninstall
 uninstall-local: uninstall-local-check
