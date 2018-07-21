@@ -77,3 +77,21 @@ help/C/omf_timestamp
 help/fr/omf_timestamp
 
 help/en/omf_timestamp
+
+tests/\.deps/
+
+tests/\$\(GTEST_DIR\)/\.deps/
+
+tests/\$\(GTEST_DIR\)/src/\.deps/
+
+tests/bookmarksam_tests
+
+*.h~
+
+*.cc~
+
+tests/Makefile~
+
+*.gmo
+
+googletest

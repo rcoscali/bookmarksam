@@ -58,9 +58,6 @@ bookmarksam_LDFLAGS = \
 
 bookmarksam_LDADD = $(BOOKMARKSAM_LIBS)
 
-
-
-
 EXTRA_DIST = $(ui_DATA)
 
 # Remove ui directory on uninstall
@@ -78,9 +75,11 @@ DISTCLEANFILES = configure Debug Makefile.in src/Makefile.in
 
 clean-local: clean-local-check
 
-.PHONY: clean-local-check
-
 clean-local-check:
 	-rm -rf .anjuta autom4te.cache sigmoid.anjuta
 	-rm -rf .anjuta_sym_db.db Debug
+
+maintainer-clean: clean-local
+
+.PHONY: clean-local-check maintainer-clean
 

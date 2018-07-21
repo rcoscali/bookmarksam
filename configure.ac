@@ -19,7 +19,8 @@
 AC_PREREQ([2.69])
 AC_INIT([bookmarksam], [0.1], [http://bookmarksam.bugzilla.org/])
 AC_CONFIG_AUX_DIR([build-aux])
-AM_INIT_AUTOMAKE([foreign subdir-objects]) # Does not require NEWS, COPYING, AUTHORS, ChangeLog or README
+AC_CONFIG_SUBDIRS([googletest])
+AM_INIT_AUTOMAKE([1.9 dist-bzip2 dist-zip foreign subdir-objects])
 LT_INIT
 
 # silent make https://autotools.io/automake/silent.html
@@ -42,10 +43,11 @@ AC_CONFIG_SRCDIR([src/bookmarksam-main.c])
 AC_CONFIG_HEADERS([config.h]) # use config.h instead of passing -D in the command line
 AC_CONFIG_MACRO_DIR([m4])
 
-AC_LANG([C]) # Use C not C++
+AC_LANG([C]) 
 
 # Checks for programs.
 AC_PROG_CC
+AC_PROG_CXX
 AC_PROG_LIBTOOL
 
 # In case that you want to check for specific versions of gcc 
@@ -62,9 +64,24 @@ AC_PROG_CC_C_O # Need to have per product flags myexecutable_CFLAG
 # Checks for libraries.
 
 # Found libraries are automatically addded to LIBS
-AC_SEARCH_LIBS([pthread_cond_wait], [pthread],[],[
-                 AC_MSG_ERROR([You need to install pthreads library.])
-                 ])
+# Configure pthreads.
+AC_ARG_WITH([pthreads],
+            [AS_HELP_STRING([--with-pthreads],
+               [use pthreads (default is yes)])],
+            [with_pthreads=$withval],
+            [with_pthreads=check])
+
+have_pthreads=no
+AS_IF([test "x$with_pthreads" != "xno"],
+      [ACX_PTHREAD(
+        [],
+        [AS_IF([test "x$with_pthreads" != "xcheck"],
+               [AC_MSG_FAILURE(
+                 [--with-pthreads was specified, but unable to be used])])])
+       have_pthreads="$acx_pthread_ok"])
+AM_CONDITIONAL([HAVE_PTHREADS],[test "x$have_pthreads" = "xyes"])
+AC_SUBST(PTHREAD_CFLAGS)
+AC_SUBST(PTHREAD_LIBS)
 
 # Checks for header files.
 AC_HEADER_ASSERT # ./configure --disable-assert to define NDEBUG 
@@ -101,14 +118,16 @@ else
   AM_CONDITIONAL(DEBUG, false)
 fi
 
-AC_CONFIG_FILES([Makefile
-                 src/Makefile
-                 help/Makefile
-                 help/C/Makefile
-                 help/fr/Makefile
-                 help/en/Makefile
-                 po/Makevars:po/Makevars.template
-                 po/Makefile.in
+AC_CONFIG_FILES([
+        Makefile
+        src/Makefile
+        tests/Makefile
+        help/Makefile
+        help/C/Makefile
+        help/fr/Makefile
+        help/en/Makefile
+        po/Makevars:po/Makevars.template
+        po/Makefile.in
 ])
 dnl ##AC_REQUIRE_AUX_FILE([tap-driver.sh])
 dnl # http://www.gnu.org/software/autoconf-archive/ax_valgrind_check.html - make check-valgrind
